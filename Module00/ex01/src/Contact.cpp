@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 18:09:52 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/02 17:30:02 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/02 18:23:32 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,19 @@ std::string	Contact::_fields_name[5] =
 	"Darkest Secret"
 };
 
-Contact::Contact()
+Contact::Contact( void )
 {
 	for (int i = first_name; i <= darkest_secret; i++)
 		this->_info[i] = std::string();
 	return ;
 }
 
-Contact::~Contact()
+Contact::~Contact( void )
 {
 	return ;
 }
 
-bool	Contact::set_contact()
+bool	Contact::set_contact( void )
 {
 	for(int i = first_name; i <= darkest_secret; i++)
 	{

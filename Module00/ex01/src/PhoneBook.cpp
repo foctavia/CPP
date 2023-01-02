@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 21:45:38 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/02 17:36:20 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/02 18:31:17 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,7 @@ void	PhoneBook::set_info( void )
 	}
 	else
 	{
-		std::cout << "Your phonebook is full. If you want to add a new contact, \
-			your oldest contact stored will be discarded." << std::endl;
+		std::cout << "Your phonebook is full. If you want to add a new contact, your oldest contact stored will be discarded." << std::endl;
 		std::cout << "Please press '1' to proceed." << std::endl;
 		getline(std::cin, input);
 		if (input.compare("1") == 0)
@@ -76,6 +75,11 @@ void	PhoneBook::get_info( void ) const
 				std::cin.clear();
 				std::cout << "You only have 1 contact saved, please enter number 1."
 					<< std::endl;
+			}
+			else if (this->_idx == 7 && this->_full == true)
+			{
+				std::cin.clear();
+				std::cout << "Please enter number between 1 and 8." << std::endl;
 			}
 			else
 			{
