@@ -6,7 +6,7 @@
 #    By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/22 15:05:48 by foctavia          #+#    #+#              #
-#    Updated: 2022/12/27 13:28:08 by foctavia         ###   ########.fr        #
+#    Updated: 2023/01/02 17:39:25 by foctavia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,26 +15,35 @@ GREEN		= "\033[1;32m"
 RESET		= "\033[m"
 
 # Variables
-NAME		= megaphone
+NAME		= PhoneBook
 
 CPP			= c++
-CPPFLAGS	= -std=c++98 -Wall -Wextra -Werror
+CPPFLAGS	= -std=c++98 -Wall -Wextra -Werror -g
 
-SRC			= megaphone.cpp
-OBJ			= $(SRC:%.cpp=%.o)
+INCDIR		= inc/
+SRCDIR		= src/
+OBJDIR		= obj/
+
+SRC			= main.cpp \
+				PhoneBook.cpp \
+				Contact.cpp
+				
+OBJ			= $(addprefix ${OBJDIR}, ${SRC:%.cpp=%.o})
+INC			= -I./$(INCDIR)
 
 # Rules
 all			: $(NAME)
 
-%.o			: %.cpp
-			$(CPP) $(CPPFLAGS) -c $< -o $@
+$(OBJDIR)%.o: $(SRCDIR)%.cpp
+			@mkdir -p ${@D}
+			$(CPP) $(CPPFLAGS) $(INC) -c $< -o $@
 
 $(NAME)		: $(OBJ)
-			$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
-			@echo "Compiling Megaphone"$(GREEN)"\tOK"$(RESET)
+			$(CPP) $(CPPFLAGS) $(INC) $(OBJ) -o $@
+			@echo "Compiling PhoneBook"$(GREEN)"\tOK"$(RESET)
 
 clean		:
-			rm -f $(OBJ)
+			rm -rf $(OBJDIR)
 
 fclean		: clean
 			rm -f $(NAME)

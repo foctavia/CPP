@@ -1,33 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/22 18:09:12 by foctavia          #+#    #+#             */
-/*   Updated: 2022/12/27 13:24:48 by foctavia         ###   ########.fr       */
+/*   Created: 2022/12/27 14:22:24 by foctavia          #+#    #+#             */
+/*   Updated: 2023/01/02 17:15:42 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
-int	main(int argc, char **argv)
+# include <iostream>
+# include <string>
+# include <iomanip>
+
+class	Contact
 {
-	if (argc == 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-		return 0;
-	}
-	for (int i = 1; i < argc; i++)
-	{
-		std::string str = std::string(argv[i]);
-		for (size_t j = 0; j < str.length(); j++)
+	private:
+		static std::string	_fields_name[5];
+		std::string			_info[11];
+
+		enum _field
 		{
-			std::cout << (char)std::toupper(str[j]);
-		}
-	}
-	std::cout << std::endl;
-	return 0;
-}
+			first_name = 0,
+			last_name,
+			nickname,
+			phone_number,
+			darkest_secret
+		};
+		
+	public:
+		Contact( void );
+		~Contact( void );
+
+		bool	set_contact();
+		void	get_contact(int idx)const;
+};
+
+#endif
