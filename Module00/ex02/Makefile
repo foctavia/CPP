@@ -6,7 +6,7 @@
 #    By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/02 17:49:55 by foctavia          #+#    #+#              #
-#    Updated: 2023/01/02 20:29:56 by foctavia         ###   ########.fr        #
+#    Updated: 2023/01/03 18:15:55 by foctavia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ INCDIR		= inc/
 SRCDIR		= src/
 OBJDIR		= obj/
 
-SRC			= test.cpp \
+SRC			= tests.cpp \
 				Account.cpp \
 				
 OBJ			= $(addprefix ${OBJDIR}, ${SRC:%.cpp=%.o})
