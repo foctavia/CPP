@@ -1,43 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/27 14:22:24 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/04 22:00:00 by foctavia         ###   ########.fr       */
+/*   Created: 2023/01/04 21:48:07 by foctavia          #+#    #+#             */
+/*   Updated: 2023/01/04 22:45:33 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
+#include "Weapon.hpp"
 
-# include <iostream>
-# include <string>
-# include <iomanip>
-
-class Contact
+Weapon::Weapon( std::string type ) : _type(type)
 {
-	private:
-		static std::string	_fields_name[5];
-		std::string			_info[11];
+	return ;
+}
 
-		enum _field
-		{
-			first_name = 0,
-			last_name,
-			nickname,
-			phone_number,
-			darkest_secret
-		};
-		
-	public:
-		Contact( void );
-		~Contact( void );
+Weapon::~Weapon( void )
+{
+	return ;
+}
 
-		bool	set_contact();
-		void	get_contact(int idx)const;
-};
+std::string	Weapon::getType( void ) const
+{
+	return (this->_type);
+}
 
-#endif
+void	Weapon::setType( const std::string &type )
+{
+	this->_type = type;
+}

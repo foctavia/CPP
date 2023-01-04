@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/01/04 17:53:13 by foctavia          #+#    #+#              #
-#    Updated: 2023/01/04 22:30:19 by foctavia         ###   ########.fr        #
+#    Created: 2023/01/04 22:30:34 by foctavia          #+#    #+#              #
+#    Updated: 2023/01/04 22:31:55 by foctavia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ GREEN		= "\033[1;32m"
 RESET		= "\033[m"
 
 # Variables
-NAME		= zombieHorde
+NAME		= attack
 
 CPP			= c++
 CPPFLAGS	= -std=c++98 -Wall -Wextra -Werror -g
@@ -25,8 +25,9 @@ SRCDIR		= src/
 OBJDIR		= obj/
 
 SRC			= main.cpp \
-				Zombie.cpp \
-				zombieHorde.cpp
+				Weapon.cpp \
+				HumanA.cpp \
+				HumanB.cpp
 				
 OBJ			= $(addprefix ${OBJDIR}, ${SRC:%.cpp=%.o})
 INC			= -I./$(INCDIR)
@@ -40,7 +41,7 @@ $(OBJDIR)%.o: $(SRCDIR)%.cpp
 
 $(NAME)		: $(OBJ)
 			$(CPP) $(CPPFLAGS) $(INC) $(OBJ) -o $@
-			@echo "Compiling zombieHorde"$(GREEN)"\tOK"$(RESET)
+			@echo "Compiling attack"$(GREEN)"\tOK"$(RESET)
 
 clean		:
 			rm -rf $(OBJDIR)

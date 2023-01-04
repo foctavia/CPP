@@ -1,43 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/27 14:22:24 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/04 22:00:00 by foctavia         ###   ########.fr       */
+/*   Created: 2023/01/04 21:48:17 by foctavia          #+#    #+#             */
+/*   Updated: 2023/01/04 22:56:21 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
+#include "HumanB.hpp"
 
-# include <iostream>
-# include <string>
-# include <iomanip>
-
-class Contact
+HumanB::HumanB( std::string name ) : _name(name)
 {
-	private:
-		static std::string	_fields_name[5];
-		std::string			_info[11];
+	return ;	
+}
 
-		enum _field
-		{
-			first_name = 0,
-			last_name,
-			nickname,
-			phone_number,
-			darkest_secret
-		};
-		
-	public:
-		Contact( void );
-		~Contact( void );
+HumanB::~HumanB( void )
+{
+	return ;
+}
 
-		bool	set_contact();
-		void	get_contact(int idx)const;
-};
+void	HumanB::attack( void )
+{
+	if (_weapon)
+		std::cout << this->_name << " attacks with his " << this->_weapon->getType() << "." << std::endl;
+	else
+		std::cout << this->_name << " is unarmed." << std::endl;
+}
 
-#endif
+void	HumanB::setWeapon( Weapon &weapon )
+{
+	this->_weapon = &weapon;
+}
