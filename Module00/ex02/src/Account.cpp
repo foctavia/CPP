@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 18:08:33 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/03 18:58:17 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/04 16:30:35 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,13 +79,36 @@ void	Account::displayAccountsInfos( void )
 
 void	Account::makeDeposit( int deposit )
 {
-	(void)deposit;
+	Account::_displayTimestamp();
+	std::cout << "index:" << this->_accountIndex
+		<< ";p_amount:" << this->checkAmount()
+		<< ";deposit:" << deposit;
+	this->_amount += deposit;
+	this->_nbDeposits++;
+	Account::_totalAmount += deposit;
+	Account::_totalNbDeposits++;
+	std::cout << ";amount:" << this->checkAmount()
+		<< ";nb_deposits:" << this->_nbDeposits << std::endl;
 }
 
 bool	Account::makeWithdrawal( int withdrawal )
 {
-	(void)withdrawal;
-	return 0;
+	Account::_displayTimestamp();
+	std::cout << "index:" << this->_accountIndex
+		<< ";p_amount:" << this->checkAmount();
+	if (this->checkAmount() < withdrawal)
+	{
+		std::cout << ";withdrawal:refused" << std::endl;
+		return (false);
+	}
+	this->_amount -= withdrawal;
+	this->_nbWithdrawals++;
+	Account::_totalAmount -= withdrawal;
+	Account::_totalNbWithdrawals++;
+	std::cout << ";withdrawal:" << withdrawal
+		<< ";amount:" << this->checkAmount()
+		<< ";nb_withdrawals:" << this->_nbWithdrawals << std::endl;
+	return (true);
 }
 
 int	Account::checkAmount( void ) const
