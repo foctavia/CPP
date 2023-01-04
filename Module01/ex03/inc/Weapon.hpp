@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 21:22:19 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/04 22:44:38 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/04 23:01:04 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Weapon
 		std::string	_type;
 		
 	public:
-		Weapon( const std::string type );
+		Weapon( std::string type );
 		~Weapon( void );
 
 		std::string	getType( void ) const;
