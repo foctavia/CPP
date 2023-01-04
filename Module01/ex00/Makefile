@@ -6,7 +6,7 @@
 #    By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/04 16:58:00 by foctavia          #+#    #+#              #
-#    Updated: 2023/01/04 17:42:42 by foctavia         ###   ########.fr        #
+#    Updated: 2023/01/04 17:59:40 by foctavia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ $(OBJDIR)%.o: $(SRCDIR)%.cpp
 
 $(NAME)		: $(OBJ)
 			$(CPP) $(CPPFLAGS) $(INC) $(OBJ) -o $@
-			@echo "Compiling Account"$(GREEN)"\tOK"$(RESET)
+			@echo "Compiling Zombie"$(GREEN)"\tOK"$(RESET)
 
 clean		:
 			rm -rf $(OBJDIR)

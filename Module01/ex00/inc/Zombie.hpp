@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:01:43 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/04 17:43:17 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/04 18:02:58 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define ZOMBIE_HPP
 
 # include <iostream>
-# include <string>
 
 class Zombie
 {
