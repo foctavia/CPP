@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:08:44 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/02 17:15:17 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/04 17:47:04 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ int	main( void )
 		command.clear();
 		PhoneBook.display_option();
 	}
-	return (0);
+	return (EXIT_SUCCESS);
 }

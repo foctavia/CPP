@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/22 18:09:12 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/04 17:46:50 by foctavia         ###   ########.fr       */
+/*   Created: 2023/01/04 17:13:18 by foctavia          #+#    #+#             */
+/*   Updated: 2023/01/04 17:44:06 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include "Zombie.hpp"
 
-int	main(int argc, char **argv)
+int	main( void )
 {
-	if (argc == 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-		return 0;
-	}
-	for (int i = 1; i < argc; i++)
-	{
-		std::string str(argv[i]);
-		for (size_t j = 0; j < str.length(); j++)
-		{
-			std::cout << (char)std::toupper(str[j]);
-		}
-	}
-	std::cout << std::endl;
-	return (EXIT_SUCCESS);
+	Zombie	*new_zombie = newZombie("New Zombie");
+
+	new_zombie->Zombie::announce();
+	randomChump("Random Chump");
+	delete new_zombie;
+	return (EXIT_SUCCESS);	
 }

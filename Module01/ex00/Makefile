@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/01/02 17:49:55 by foctavia          #+#    #+#              #
-#    Updated: 2023/01/04 16:59:44 by foctavia         ###   ########.fr        #
+#    Created: 2023/01/04 16:58:00 by foctavia          #+#    #+#              #
+#    Updated: 2023/01/04 17:42:42 by foctavia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ GREEN		= "\033[1;32m"
 RESET		= "\033[m"
 
 # Variables
-NAME		= Account
+NAME		= Zombie
 
 CPP			= c++
 CPPFLAGS	= -std=c++98 -Wall -Wextra -Werror -g
@@ -24,8 +24,10 @@ INCDIR		= inc/
 SRCDIR		= src/
 OBJDIR		= obj/
 
-SRC			= tests.cpp \
-				Account.cpp
+SRC			= main.cpp \
+				Zombie.cpp \
+				newZombie.cpp \
+				randomChump.cpp
 				
 OBJ			= $(addprefix ${OBJDIR}, ${SRC:%.cpp=%.o})
 INC			= -I./$(INCDIR)
@@ -51,3 +53,4 @@ re			: fclean
 			make all
 
 .PHONY		: all clean fclean re
+
