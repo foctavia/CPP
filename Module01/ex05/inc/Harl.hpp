@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/27 14:22:24 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/05 10:15:14 by foctavia         ###   ########.fr       */
+/*   Created: 2023/01/04 23:09:42 by foctavia          #+#    #+#             */
+/*   Updated: 2023/01/04 23:21:17 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
+#ifndef HARL_HPP
+# define HARL_HPP
 
 # include <iostream>
 # include <string>
-# include <iomanip>
 
-class Contact
+class Harl
 {
 	private:
-		static std::string	_fields[5];
-		std::string			_info[11];
-		
-	public:
-		Contact( void );
-		~Contact( void );
+		void	debug( void );
+		void	info( void );
+		void	warning( void );
+		void	error( void );
 
-		bool	set_contact();
-		void	get_contact(int idx)const;
+	public:
+		Harl( void );
+		~Harl( void );
+
+		void	complain( std::string level );
 };
 
 #endif

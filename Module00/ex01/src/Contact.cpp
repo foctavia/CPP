@@ -6,14 +6,14 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 18:09:52 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/02 18:23:32 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/05 10:29:44 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
 
-std::string	Contact::_fields_name[5] =
+std::string	Contact::_fields[5] =
 {
 	"First Name",
 	"Last Name",
@@ -24,7 +24,7 @@ std::string	Contact::_fields_name[5] =
 
 Contact::Contact( void )
 {
-	for (int i = first_name; i <= darkest_secret; i++)
+	for (int i = 0; i < 5; i++)
 		this->_info[i] = std::string();
 	return ;
 }
@@ -36,12 +36,12 @@ Contact::~Contact( void )
 
 bool	Contact::set_contact( void )
 {
-	for(int i = first_name; i <= darkest_secret; i++)
+	for(int i = 0; i < 4; i++)
 	{
-		std::cout << Contact::_fields_name[i] << ":" << std::endl;
+		std::cout << Contact::_fields[i] << ":" << std::endl;
 		while (!(std::getline(std::cin, this->_info[i])) || this->_info[i].length() == 0)
 		{
-			std::cout << "Please fill in information. " << Contact::_fields_name[i]
+			std::cout << "Please fill in information. " << Contact::_fields[i]
 				<< " is mandatory." << std::endl;
 		}
 	}
@@ -52,7 +52,7 @@ bool	Contact::set_contact( void )
 void	Contact::get_contact(int idx) const
 {
 	std::cout << "|" << std::setw(10) << idx;
-	for (int i = first_name; i <= nickname; i++)
+	for (int i = 0; i < 3; i++)
 	{
 		std::cout << "|";
 		if (this->_info[i].length() > 10)
