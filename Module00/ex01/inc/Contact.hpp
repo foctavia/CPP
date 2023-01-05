@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 14:22:24 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/05 16:18:14 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/05 17:47:16 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Contact
 {
 	private:
 		static std::string	_fields[5];
-		std::string			_info[11];
+		std::string			_info[5];
 
 		enum _idx
 		{

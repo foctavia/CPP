@@ -6,7 +6,7 @@
 #    By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/05 10:41:44 by foctavia          #+#    #+#              #
-#    Updated: 2023/01/05 10:42:30 by foctavia         ###   ########.fr        #
+#    Updated: 2023/01/05 17:51:15 by foctavia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ RESET		= "\033[m"
 # Variables
 NAME		= harlFilter
 
-CPP			= c++
-CPPFLAGS	= -std=c++98 -Wall -Wextra -Werror -g
+CXX			= c++
+CXXFLAGS	= -std=c++98 -Wall -Wextra -Werror -g
 
 INCDIR		= inc/
 SRCDIR		= src/
@@ -35,10 +35,10 @@ all			: $(NAME)
 
 $(OBJDIR)%.o: $(SRCDIR)%.cpp
 			@mkdir -p ${@D}
-			$(CPP) $(CPPFLAGS) $(INC) -c $< -o $@
+			$(CXX) $(CXXFLAGS) $(INC) -c $< -o $@
 
 $(NAME)		: $(OBJ)
-			$(CPP) $(CPPFLAGS) $(INC) $(OBJ) -o $@
+			$(CXX) $(CXXFLAGS) $(INC) $(OBJ) -o $@
 			@echo "Compiling harlFilter"$(GREEN)"\tOK"$(RESET)
 
 clean		:

@@ -6,7 +6,7 @@
 #    By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/22 15:05:48 by foctavia          #+#    #+#              #
-#    Updated: 2023/01/05 17:39:36 by foctavia         ###   ########.fr        #
+#    Updated: 2023/01/05 17:51:15 by foctavia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,10 +27,10 @@ OBJ			= $(SRC:%.cpp=%.o)
 all			: $(NAME)
 
 %.o			: %.cpp
-			$(CPP) $(CPPFLAGS) -c $< -o $@
+			$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME)		: $(OBJ)
-			$(CPP) $(CPPFLAGS) $(OBJ) -o $@
+			$(CXX) $(CXXFLAGS) $(OBJ) -o $@
 			@echo "Compiling Megaphone"$(GREEN)"\tOK"$(RESET)
 
 clean		:

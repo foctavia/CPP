@@ -6,7 +6,7 @@
 #    By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/22 15:05:48 by foctavia          #+#    #+#              #
-#    Updated: 2023/01/05 17:42:05 by foctavia         ###   ########.fr        #
+#    Updated: 2023/01/05 17:51:15 by foctavia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,10 +36,10 @@ all			: $(NAME)
 
 $(OBJDIR)%.o: $(SRCDIR)%.cpp
 			@mkdir -p ${@D}
-			$(CPP) $(CPPFLAGS) $(INC) -c $< -o $@
+			$(CXX) $(CXXFLAGS) $(INC) -c $< -o $@
 
 $(NAME)		: $(OBJ)
-			$(CPP) $(CPPFLAGS) $(INC) $(OBJ) -o $@
+			$(CXX) $(CXXFLAGS) $(INC) $(OBJ) -o $@
 			@echo "Compiling PhoneBook"$(GREEN)"\tOK"$(RESET)
 
 clean		:

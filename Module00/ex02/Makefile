@@ -6,7 +6,7 @@
 #    By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/02 17:49:55 by foctavia          #+#    #+#              #
-#    Updated: 2023/01/05 17:41:41 by foctavia         ###   ########.fr        #
+#    Updated: 2023/01/05 17:51:15 by foctavia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,10 +35,10 @@ all			: $(NAME)
 
 $(OBJDIR)%.o: $(SRCDIR)%.cpp
 			@mkdir -p ${@D}
-			$(CPP) $(CPPFLAGS) $(INC) -c $< -o $@
+			$(CXX) $(CXXFLAGS) $(INC) -c $< -o $@
 
 $(NAME)		: $(OBJ)
-			$(CPP) $(CPPFLAGS) $(INC) $(OBJ) -o $@
+			$(CXX) $(CXXFLAGS) $(INC) $(OBJ) -o $@
 			@echo "Compiling Account"$(GREEN)"\tOK"$(RESET)
 
 clean		:

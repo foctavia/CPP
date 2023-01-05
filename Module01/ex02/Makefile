@@ -6,7 +6,7 @@
 #    By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/04 20:54:54 by foctavia          #+#    #+#              #
-#    Updated: 2023/01/04 21:13:15 by foctavia         ###   ########.fr        #
+#    Updated: 2023/01/05 17:51:15 by foctavia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ RESET		= "\033[m"
 # Variables
 NAME		= references
 
-CPP			= c++
-CPPFLAGS	= -std=c++98 -Wall -Wextra -Werror
+CXX			= c++
+CXXFLAGS	= -std=c++98 -Wall -Wextra -Werror
 
 SRC			= main.cpp
 OBJ			= $(SRC:%.cpp=%.o)
@@ -27,10 +27,10 @@ OBJ			= $(SRC:%.cpp=%.o)
 all			: $(NAME)
 
 %.o			: %.cpp
-			$(CPP) $(CPPFLAGS) -c $< -o $@
+			$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME)		: $(OBJ)
-			$(CPP) $(CPPFLAGS) $(OBJ) -o $@
+			$(CXX) $(CXXFLAGS) $(OBJ) -o $@
 			@echo "Compiling references"$(GREEN)"\tOK"$(RESET)
 
 clean		:
