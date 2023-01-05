@@ -6,7 +6,7 @@
 #    By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/02 17:49:55 by foctavia          #+#    #+#              #
-#    Updated: 2023/01/04 16:59:44 by foctavia         ###   ########.fr        #
+#    Updated: 2023/01/05 17:41:41 by foctavia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ RESET		= "\033[m"
 # Variables
 NAME		= Account
 
-CPP			= c++
-CPPFLAGS	= -std=c++98 -Wall -Wextra -Werror -g
+CXX			= c++
+CXXFLAGS	= -std=c++98 -Wall -Wextra -Werror -g
 
 INCDIR		= inc/
 SRCDIR		= src/

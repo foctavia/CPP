@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 18:09:52 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/05 11:55:54 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/05 17:32:25 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,11 @@ bool	Contact::set_contact( void )
 		std::cout << Contact::_fields[i] << ":" << std::endl;
 		while (!(std::getline(std::cin, this->_info[i])) || this->_info[i].length() == 0)
 		{
+			if (!std::cin)
+			{
+				std::cout << std::endl << "Exiting phonebook now." << std::endl;
+				exit(0);
+			}
 			std::cout << "Please fill in information. " << Contact::_fields[i]
 				<< " is mandatory." << std::endl;
 		}
@@ -49,7 +54,12 @@ bool	Contact::set_contact( void )
 	return (true);
 }
 
-void	Contact::get_contact(int idx) const
+std::string	Contact::get_contact(int field_idx) const
+{
+	return (this->_info[field_idx]);
+}
+
+void	Contact::display_contact(int idx) const
 {
 	std::cout << "|" << std::setw(10) << idx;
 	for (int i = first_name; i <= nickname; i++)

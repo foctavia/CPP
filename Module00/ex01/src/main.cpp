@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:08:44 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/04 17:47:04 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/05 17:31:30 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ int	main( void )
 		if (command.compare("ADD") == 0)
 			PhoneBook.set_info();
 		else if (command.compare("SEARCH") == 0)
-			PhoneBook.get_info();
+			PhoneBook.display_phonebook();
 		else if (command.compare("EXIT") == 0)
 		{
-			std::cout << "Exiting phonebook now." << std::endl;
+			std::cout << std::endl << "Exiting phonebook now." << std::endl;
 			run = false;
-			exit (0);
+			break ;
 		}
 		command.clear();
 		PhoneBook.display_option();

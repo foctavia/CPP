@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 18:09:12 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/04 17:46:50 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/05 17:40:14 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ int	main(int argc, char **argv)
 		}
 	}
 	std::cout << std::endl;
-	return (EXIT_SUCCESS);
+	return 0;
 }

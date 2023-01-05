@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 14:22:24 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/05 11:53:23 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/05 16:18:14 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,9 @@ class Contact
 		Contact( void );
 		~Contact( void );
 
-		bool	set_contact();
-		void	get_contact(int idx)const;
+		bool		set_contact();
+		std::string	get_contact(int field_idx) const;
+		void		display_contact(int idx) const;
 };
 
 #endif

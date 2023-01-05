@@ -6,7 +6,7 @@
 #    By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/22 15:05:48 by foctavia          #+#    #+#              #
-#    Updated: 2023/01/04 20:55:12 by foctavia         ###   ########.fr        #
+#    Updated: 2023/01/05 17:39:36 by foctavia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ RESET		= "\033[m"
 # Variables
 NAME		= megaphone
 
-CPP			= c++
-CPPFLAGS	= -std=c++98 -Wall -Wextra -Werror
+CXX			= c++
+CXXFLAGS	= -std=c++98 -Wall -Wextra -Werror
 
 SRC			= megaphone.cpp
 OBJ			= $(SRC:%.cpp=%.o)

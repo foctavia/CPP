@@ -6,7 +6,7 @@
 #    By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/22 15:05:48 by foctavia          #+#    #+#              #
-#    Updated: 2023/01/02 17:39:25 by foctavia         ###   ########.fr        #
+#    Updated: 2023/01/05 17:42:05 by foctavia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ RESET		= "\033[m"
 # Variables
 NAME		= PhoneBook
 
-CPP			= c++
-CPPFLAGS	= -std=c++98 -Wall -Wextra -Werror -g
+CXX			= c++
+CXXFLAGS	= -std=c++98 -Wall -Wextra -Werror -g
 
 INCDIR		= inc/
 SRCDIR		= src/
