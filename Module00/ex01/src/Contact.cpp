@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 18:09:52 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/05 10:29:44 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/05 11:55:54 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ std::string	Contact::_fields[5] =
 
 Contact::Contact( void )
 {
-	for (int i = 0; i < 5; i++)
+	for (int i = first_name; i <= darkest_secret; i++)
 		this->_info[i] = std::string();
 	return ;
 }
@@ -36,7 +36,7 @@ Contact::~Contact( void )
 
 bool	Contact::set_contact( void )
 {
-	for(int i = 0; i < 4; i++)
+	for(int i = first_name; i <= darkest_secret; i++)
 	{
 		std::cout << Contact::_fields[i] << ":" << std::endl;
 		while (!(std::getline(std::cin, this->_info[i])) || this->_info[i].length() == 0)
@@ -52,7 +52,7 @@ bool	Contact::set_contact( void )
 void	Contact::get_contact(int idx) const
 {
 	std::cout << "|" << std::setw(10) << idx;
-	for (int i = 0; i < 3; i++)
+	for (int i = first_name; i <= nickname; i++)
 	{
 		std::cout << "|";
 		if (this->_info[i].length() > 10)
