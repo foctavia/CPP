@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 23:09:44 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/05 10:37:52 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/06 10:50:20 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,11 @@ int	main( void )
 	{
 		std::cout << "Please input Harl's mood ( DEBUG/INFO/WARNING/ERROR ): ";
 		getline(std::cin, input);
+		if (std::cin.eof() == true)
+		{
+			std::cerr << "^D" << std::endl;
+			exit(EXIT_FAILURE);
+		}
 		std::cout << std::endl;
 		harl.complain(input);
 	}
