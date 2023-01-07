@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 17:42:29 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/06 18:27:46 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/07 01:41:35 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,17 @@ class Fixed
 		Fixed( const int int_num );
 		Fixed( const float floatPoint_num );
 		Fixed( Fixed const &src);
+		
 		~Fixed( void );
 
 		Fixed	&operator=( Fixed const &rhs );
 		
+		int		getRawBits( void ) const;
+		void	setRawBits( int const raw );
+		
 		float	toFloat( void ) const;
 		int		toInt( void ) const;
 		
-		int		getRawBits( void ) const;
-		void	setRawBits( int const raw );
-
 };
 
 std::ostream	&operator<<( std::ostream &obj, Fixed const &insert );

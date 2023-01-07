@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 17:42:22 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/06 18:27:46 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/07 01:40:50 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,16 +55,6 @@ Fixed	&Fixed::operator=( Fixed const &rhs )
 	return (*this);
 }
 
-float	Fixed::toFloat( void ) const
-{
-	return ((float)this->_fixedPoint_num / (float)(1 << this->_fractional_bits));
-}
-
-int Fixed::toInt( void ) const
-{
-	return (this->_fixedPoint_num >> this->_fractional_bits);	
-}
-
 int	Fixed::getRawBits( void ) const
 {
 	return (this->_fixedPoint_num);
@@ -73,6 +63,16 @@ int	Fixed::getRawBits( void ) const
 void	Fixed::setRawBits( int const raw)
 {
 	this->_fixedPoint_num = raw;
+}
+
+float	Fixed::toFloat( void ) const
+{
+	return ((float)this->_fixedPoint_num / (float)(1 << this->_fractional_bits));
+}
+
+int Fixed::toInt( void ) const
+{
+	return (this->_fixedPoint_num >> this->_fractional_bits);	
 }
 
 std::ostream	&operator<<( std::ostream &obj, Fixed const &insert )
