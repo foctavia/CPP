@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/06 23:46:42 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/07 02:00:31 by foctavia         ###   ########.fr       */
+/*   Created: 2023/01/07 01:50:37 by foctavia          #+#    #+#             */
+/*   Updated: 2023/01/08 20:45:09 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int Fixed::toInt( void ) const
 	return (this->_fixedPoint_num >> this->_fractional_bits);	
 }
 
-/* Assignment Operator******************************************************* */
+/* Assignment Operators****************************************************** */
 
 Fixed	&Fixed::operator=( Fixed const &rhs )
 {
@@ -157,9 +157,9 @@ Fixed	&Fixed::operator++( void )
 // Post-Increment
 Fixed	Fixed::operator++( int )
 {
-	Fixed	tmp = *this;
+	Fixed	copy = *this;
 	this->_fixedPoint_num++;
-	return (tmp);
+	return (copy);
 }
 
 // Pre-Decrement
@@ -172,9 +172,9 @@ Fixed	&Fixed::operator--( void )
 // Post-Decrement
 Fixed	Fixed::operator--( int )
 {
-	Fixed	tmp = *this;
+	Fixed	copy = *this;
 	this->_fixedPoint_num--;
-	return (tmp);
+	return (copy);
 }
 
 /* Public Overload Functions************************************************* */
