@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 16:35:30 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/09 16:45:47 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/09 23:58:05 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,15 @@ class Animal
 
 	public:
 		Animal( void );
+		Animal( const std::string type );
 		Animal( Animal const &src );
 		
-		~Animal( void );
+		virtual ~Animal( void );
 
-		Animal	&operator=( Animal const &rhs );
-		
+		Animal			&operator=( Animal const &rhs );
+
+		std::string		getType( void ) const;	
+		virtual void	makeSound( void ) const;
 };
 
 #endif
