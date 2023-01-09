@@ -6,20 +6,23 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 18:13:55 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/06 12:21:39 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/09 15:45:37 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cerrno>
+#include <cstring>
+#include <stdlib.h>
 
 void	display_usage( void )
 {
 	std::cerr << "Program needs 3 parameters to work, "
 			<< "a valid file name, a string to search in the file, and another string to replace the search string." << std::endl
 			<< "Usage : ./replace <filename> <search> <replace>" << std::endl;
-	exit (EXIT_FAILURE);
+	exit(1);
 }
 
 void	check_string( std::string search )
@@ -36,14 +39,14 @@ void	open_files( std::string &filename, std::ifstream &infile, std::ofstream &ou
 	infile.open(filename.c_str(), std::ios::in);
 	if (!infile)
 	{
-		std::cerr << "ERROR : " << filename << " : " << strerror(errno) << std::endl;
+		std::cerr << "ERROR : " << filename << " : " << std::strerror(errno) << std::endl;
 		display_usage();
 	}
 	filename.append(".replace");
 	outfile.open(filename.c_str(), std::ios::out);
 	if (!outfile)
 	{
-		std::cerr << "ERROR : " << filename << ": " << strerror(errno) << std::endl;
+		std::cerr << "ERROR : " << filename << ": " << std::strerror(errno) << std::endl;
 		display_usage();
 	}
 }
@@ -96,5 +99,5 @@ int	main(int argc, char **argv)
 	open_files(filename, infile, outfile);
 	get_file(search, replace, infile, outfile);
 	close_files(infile, outfile);
-	return (EXIT_SUCCESS);
+	return 0;
 }

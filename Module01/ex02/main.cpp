@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 20:57:45 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/04 21:09:49 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/09 15:36:59 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ int	main( void )
 	std::cout << "The value pointed to by stringPTR:\t" << *stringPTR << std::endl;
 	std::cout << "The value pointed to by stringREF:\t" << stringREF << std::endl;
 
-	return (EXIT_SUCCESS);
+	return 0;
 }

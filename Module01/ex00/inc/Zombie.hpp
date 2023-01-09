@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:01:43 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/04 22:00:22 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/09 15:19:54 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Zombie
 		std::string	_name;
 		
 	public:
+		Zombie( void );
 		Zombie( std::string name );
 		~Zombie( void );
 		

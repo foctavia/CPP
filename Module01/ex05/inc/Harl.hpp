@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 23:09:42 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/04 23:21:17 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/09 15:51:09 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include <stdlib.h>
 
 class Harl
 {

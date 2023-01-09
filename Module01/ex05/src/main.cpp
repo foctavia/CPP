@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 23:09:44 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/06 10:50:20 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/09 15:51:23 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ int	main( void )
 		if (std::cin.eof() == true)
 		{
 			std::cerr << "^D" << std::endl;
-			exit(EXIT_FAILURE);
+			exit(1);
 		}
 		std::cout << std::endl;
 		harl.complain(input);
 	}
-	return (EXIT_SUCCESS);
+	return 0;
 }
