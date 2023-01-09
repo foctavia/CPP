@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 23:46:44 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/07 02:00:41 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/09 00:03:34 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Fixed
 		Fixed( void );
 		Fixed( const int int_num );
 		Fixed( const float floatPoint_num );
-		Fixed( Fixed const &src);
+		Fixed( Fixed const &src );
 
 	// Destructor
 		~Fixed( void );
