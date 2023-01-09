@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 17:42:29 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/09 00:03:40 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/09 16:20:59 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Fixed
 {
 	private:
 		int					_fixedPoint_num;
-		static const int	_fractionalional_bits;
+		static const int	_fractional_bits;
 
 	public:
 		Fixed( void );
