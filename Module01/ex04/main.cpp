@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 18:13:55 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/09 15:45:37 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/10 18:04:51 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <string>
 #include <cerrno>
 #include <cstring>
-#include <stdlib.h>
+#include <cstdlib>
 
 void	display_usage( void )
 {
