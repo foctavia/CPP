@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:46:47 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/09 12:35:38 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/10 17:17:59 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class FragTrap : virtual public ClapTrap
 		FragTrap( const std::string name );
 		FragTrap( FragTrap const &src );
 		
-		~FragTrap( void );
+		virtual ~FragTrap( void );
 
 		FragTrap	&operator=( FragTrap const &rhs );
 

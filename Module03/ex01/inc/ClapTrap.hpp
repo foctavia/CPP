@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 02:09:09 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/09 02:15:00 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/10 17:16:41 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class ClapTrap
 		ClapTrap( const std::string name );
 		ClapTrap( ClapTrap const &src );
 
-		~ClapTrap( void );
+		virtual ~ClapTrap( void );
 		
 		ClapTrap		&operator=( ClapTrap const &rhs );
 

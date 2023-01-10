@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 02:09:11 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/09 10:33:37 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/10 17:17:06 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class ScavTrap : public ClapTrap
 		ScavTrap( const std::string name );
 		ScavTrap( ScavTrap const &src );
 		
-		~ScavTrap( void );
+		virtual ~ScavTrap( void );
 
 		ScavTrap	&operator=( ScavTrap const &rhs );
 	
