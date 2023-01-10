@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 16:35:25 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/10 00:20:31 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/10 18:15:25 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ Animal::~Animal( void )
 Animal	&Animal::operator=( Animal const &rhs )
 {
 	if (this != &rhs)
-		this->_type = rhs._type;
+		this->_type = rhs.getType();
 	std::cout << "Animal type " << this->_type << " assignment operator called" << std::endl;
 	return (*this);
 }

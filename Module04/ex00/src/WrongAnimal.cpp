@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 23:00:32 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/10 00:20:16 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/10 18:15:54 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ WrongAnimal::~WrongAnimal( void )
 WrongAnimal	&WrongAnimal::operator=( WrongAnimal const &rhs )
 {
 	if (this != &rhs)
-		this->_type = rhs._type;
+		this->_type = rhs.getType();
 	std::cout << "WrongAnimal type " << this->_type << " assignment operator called" << std::endl;
 	return (*this);
 }

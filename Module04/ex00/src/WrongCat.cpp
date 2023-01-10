@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 23:00:35 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/10 00:19:27 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/10 18:16:02 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ WrongCat::~WrongCat( void )
 WrongCat	&WrongCat::operator=( WrongCat const &rhs )
 {
 	if (this != &rhs)
-		this->_type = rhs._type;
+		this->_type = rhs.getType();
 	std::cout << "WrongCat assignment operator called" << std::endl;
 	return (*this);
 }

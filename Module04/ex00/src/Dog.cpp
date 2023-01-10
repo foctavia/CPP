@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 16:35:20 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/10 00:08:11 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/10 18:15:44 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Dog::~Dog( void )
 Dog	&Dog::operator=( Dog const &rhs )
 {
 	if (this != &rhs)
-		this->_type = rhs._type;
+		this->_type = rhs.getType();
 	std::cout << "Dog assignment operator called" << std::endl;
 	return (*this);
 }

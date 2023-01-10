@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 16:35:22 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/10 00:06:04 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/10 18:15:36 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Cat::~Cat( void )
 Cat	&Cat::operator=( Cat const &rhs )
 {
 	if (this != &rhs)
-		this->_type = rhs._type;
+		this->_type = rhs.getType();
 	std::cout << "Cat assignment operator called" << std::endl;
 	return (*this);
 }
