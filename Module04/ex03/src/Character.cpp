@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:53:47 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/11 02:03:45 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/11 02:08:41 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ std::string const	&Character::getName( void ) const
 
 void	Character::equip( AMateria* m )
 {
-	if (!m || _slot >= 4)
+	if (!m || this->_slot >= 4)
 		return ;
 	int	i = 0;
 	while (this->_inventory[i])
