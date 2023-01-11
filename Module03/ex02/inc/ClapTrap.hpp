@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 02:09:09 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/10 17:17:17 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/11 18:01:43 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,16 @@ class ClapTrap
 
 		virtual ~ClapTrap( void );
 		
-		ClapTrap		&operator=( ClapTrap const &rhs );
+		ClapTrap	&operator=( ClapTrap const &rhs );
 
-		std::string		getName( void ) const;	
-		unsigned int	getHitPoint( void ) const;
-		unsigned int	getEnergyPoint( void ) const;
-		unsigned int	getAttackDamage( void ) const;
+		std::string	getName( void ) const;	
+		int			getHitPoint( void ) const;
+		int			getEnergyPoint( void ) const;
+		int			getAttackDamage( void ) const;
 
-		void			attack( const std::string &target );
-		void			takeDamage( unsigned int amount );
-		void			beRepaired( unsigned int amount );
+		void		attack( const std::string &target );
+		void		takeDamage( unsigned int amount );
+		void		beRepaired( unsigned int amount );
 };
 
 std::ostream	&operator<<( std::ostream &obj, ClapTrap const &insert );

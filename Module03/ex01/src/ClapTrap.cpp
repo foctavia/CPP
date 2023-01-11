@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 02:09:15 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/09 10:26:39 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/11 17:59:43 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,17 +55,17 @@ std::string	ClapTrap::getName( void ) const
 	return (this->_name);
 }
 
-unsigned int	ClapTrap::getHitPoint( void ) const
+int	ClapTrap::getHitPoint( void ) const
 {
 	return (this->_hitPoint);
 }
 
-unsigned int	ClapTrap::getEnergyPoint( void ) const
+int	ClapTrap::getEnergyPoint( void ) const
 {
 	return (this->_energyPoint);
 }
 
-unsigned int	ClapTrap::getAttackDamage( void ) const
+int	ClapTrap::getAttackDamage( void ) const
 {
 	return (this->_attackDamage);
 }
