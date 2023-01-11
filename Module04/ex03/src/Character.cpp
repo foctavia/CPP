@@ -6,20 +6,20 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:53:47 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/11 01:58:32 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/11 02:03:45 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
-Character::Character( void ) : _name( "unknown" ), _slotIdx( 0 )
+Character::Character( void ) : _name( "unknown" ), _slot( 0 )
 {
 	for(int i = 0; i < 4; i++)
 		this->_inventory[i] = NULL;
 	return ;
 }
 
-Character::Character( std::string name ) : _name( name ), _slotIdx( 0 )
+Character::Character( std::string name ) : _name( name ), _slot( 0 )
 {
 	for(int i = 0; i < 4; i++)
 		this->_inventory[i] = NULL;
@@ -44,7 +44,7 @@ Character	&Character::operator=( Character const &rhs )
 		for(int i = 0; i < 4; i++)
 			this->_inventory[i] = rhs._inventory[i];
 		this->_name = rhs.getName();
-		this->_slotIdx = rhs._slotIdx;
+		this->_slot = rhs._slot;
 	}
 	return (*this);
 }
@@ -56,13 +56,13 @@ std::string const	&Character::getName( void ) const
 
 void	Character::equip( AMateria* m )
 {
-	if (!m || _slotIdx >= 4)
+	if (!m || _slot >= 4)
 		return ;
 	int	i = 0;
 	while (this->_inventory[i])
 		i++;
 	this->_inventory[i] = m;
-	this->_slotIdx++;
+	this->_slot++;
 }
 
 void	Character::unequip(int idx )
@@ -71,7 +71,7 @@ void	Character::unequip(int idx )
 		return ;
 	if (this->_inventory[idx])
 		this->_inventory[idx] = NULL;
-	this->_slotIdx--;
+	this->_slot--;
 }
 
 void	Character::use( int idx, ICharacter& target )
