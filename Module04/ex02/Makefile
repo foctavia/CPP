@@ -6,7 +6,7 @@
 #    By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/09 16:35:28 by foctavia          #+#    #+#              #
-#    Updated: 2023/01/10 21:24:13 by foctavia         ###   ########.fr        #
+#    Updated: 2023/01/10 21:44:20 by foctavia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ GREEN		= "\033[1;32m"
 RESET		= "\033[m"
 
 # Variables
-NAME		= Abstract
+NAME		= abstract
 
 CXX			= c++
 CXXFLAGS	= -std=c++98 -Wall -Wextra -Werror -g
@@ -42,7 +42,7 @@ $(OBJDIR)%.o: $(SRCDIR)%.cpp
 
 $(NAME)		: $(OBJ)
 			$(CXX) $(CXXFLAGS) $(INC) $(OBJ) -o $@
-			@echo "Compiling Abstract"$(GREEN)"\tOK"$(RESET)
+			@echo "Compiling abstract"$(GREEN)"\tOK"$(RESET)
 
 clean		:
 			rm -rf $(OBJDIR)
