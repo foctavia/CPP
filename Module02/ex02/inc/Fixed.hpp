@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 23:46:44 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/09 00:03:34 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/11 17:46:17 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <cmath>
+# include <cstdlib>
 
 class Fixed
 {

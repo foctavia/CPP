@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 01:50:37 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/08 20:45:09 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/11 17:42:59 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,11 @@ Fixed	Fixed::operator*( Fixed const &rhs ) const
 
 Fixed	Fixed::operator/( Fixed const &rhs ) const
 {
+	if (rhs.toFloat() == 0)
+	{
+		std::cerr << "ERROR : The denominator in a fraction cannot be zero, because division by zero is undefined" << std::endl;
+		exit(1);
+	}
 	return Fixed(this->toFloat() / rhs.toFloat());
 }
 
