@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:50:10 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/11 22:43:36 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/12 02:37:03 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ class Bureaucrat
 			public:
 				virtual const char	*what( void ) const throw();
 		};
-
 };
 
 std::ostream	&operator<<( std::ostream &obj, Bureaucrat const &insert );
