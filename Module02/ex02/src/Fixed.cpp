@@ -6,11 +6,13 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 23:46:42 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/11 17:42:38 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/12 15:53:47 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+// source : https://embeddedartistry.com/blog/2018/07/12/simple-fixed-point-conversion-in-c/
 
 const int	Fixed::_fractional_bits = 8;
 
@@ -151,6 +153,8 @@ bool	Fixed::operator!=( Fixed const &rhs ) const
 }
 
 /* Incremet / Decrement Operators******************************************** */
+
+// source : https://en.cppreference.com/w/cpp/language/operator_incdec
 
 // Pre-Increment
 Fixed	&Fixed::operator++( void )

@@ -6,30 +6,29 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 01:50:42 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/08 22:33:37 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/12 15:50:27 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Point.hpp"
 
-static bool	isOnLine( Point p1, Point p2, Point cross )
+// source : https://codereview.stackexchange.com/questions/98787/checking-if-the-point-is-on-the-line-segment
+static bool	isOnLine( Point start, Point end, Point point )
 {
-	float	deltaX_cross = cross.getX().toFloat() - p1.getX().toFloat();
-	float	deltaY_cross = cross.getY().toFloat() - p1.getY().toFloat();
-	float	deltaX_line = p2.getX().toFloat() - p1.getX().toFloat();
-	float	deltaY_line = p2.getY().toFloat() - p1.getY().toFloat();
+	float	deltaX_line = end.getX().toFloat() - start.getX().toFloat();
+	float	deltaY_line = end.getY().toFloat() - start.getY().toFloat();
+	float	deltaX_point = point.getX().toFloat() - start.getX().toFloat();
+	float	deltaY_point = point.getY().toFloat() - start.getY().toFloat();
 
-	if ((deltaX_cross * deltaY_line) - (deltaY_cross * deltaX_line))
-		return (false);
-	return (true);
+	return ((deltaX_point * deltaY_line) == (deltaY_point * deltaX_line));
 }
 
+// source : https://www.geeksforgeeks.org/check-whether-a-given-point-lies-inside-a-triangle-or-not/
 static float	getTriangleArea( Point const p1, Point const p2, Point const p3 )
 {
-	// area = ( x1(y2 - y3) + x2(y3 - y1) + x3(y1 - y2) ) / 2
-	
 	float	triangleArea;
 
+	// area = ( x1(y2 - y3) + x2(y3 - y1) + x3(y1 - y2) ) / 2
 	triangleArea = ((p1.getX().toFloat() * (p2.getY().toFloat() - p3.getY().toFloat())) 
 			+ (p2.getX().toFloat() * (p3.getY().toFloat() - p1.getY().toFloat()))
 			+ (p3.getX().toFloat() * (p1.getY().toFloat() - p2.getY().toFloat())))

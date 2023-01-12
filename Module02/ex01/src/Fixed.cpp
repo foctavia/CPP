@@ -6,11 +6,13 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 17:42:22 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/07 01:40:50 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/12 15:53:25 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+// source : https://embeddedartistry.com/blog/2018/07/12/simple-fixed-point-conversion-in-c/
 
 const int	Fixed::_fractional_bits = 8;
 
