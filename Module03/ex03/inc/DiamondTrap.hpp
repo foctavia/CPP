@@ -6,9 +6,11 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 11:30:47 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/09 12:36:18 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/12 18:42:11 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// source : https://www.scaler.com/topics/cpp/multiple-inheritance-in-cpp/
 
 #ifndef DIAMOND_HPP
 # define DIAMOND_HPP
