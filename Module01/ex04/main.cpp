@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 18:13:55 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/10 18:04:51 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/12 13:58:41 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	get_file( std::string &search, std::string &replace, std::ifstream &infile,
 	{
 		ft_replace(buffer, search, replace);
 		outfile << buffer;
-		if (infile.peek() != EOF)
+		if (!infile.eof())
 			outfile << std::endl;
 	}
 }
