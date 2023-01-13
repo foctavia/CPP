@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 16:33:01 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/10 21:00:35 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/13 19:10:23 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,6 +143,15 @@ void	secondTest( void )
 		delete dogs[i];
 		std::cout << std::endl;
 	}
+
+	// std::cout << std::endl << std::endl;
+
+	// Dog basic;
+	// std::cout << std::endl;
+	// {
+	// 	Dog tmp = basic;
+	// }
+	// std::cout << std::endl;
 }
 
 int main()
