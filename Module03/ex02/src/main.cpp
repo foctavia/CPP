@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:46:30 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/09 11:15:51 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/13 14:39:48 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,16 @@
 
 int	main( void )
 {
+	std::cout << "***************DEFAULT CONSTRUCTOR****************"
+		<< std::endl << std::endl;
+		
 	ClapTrap	random;
 	ScavTrap	john("John");
 	FragTrap	mike("Mike");
 	
-	std::cout << std::endl;
+	std::cout << std::endl
+		<< "**********************TESTER**********************"
+		<< std::endl << std::endl;
 	
 	john.attack(random.getName());
 	john.takeDamage(20);
@@ -39,7 +44,9 @@ int	main( void )
 	mike.beRepaired(15);
 	mike.highFivesGuys();
 
-	std::cout << std::endl;
+	std::cout << std::endl
+		<< "********************DESTRUCTOR********************"
+		<< std::endl << std::endl;
 
 	return 0;	
 }
