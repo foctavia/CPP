@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 02:09:17 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/09 10:57:16 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/13 14:35:27 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ ScavTrap::ScavTrap( const std::string name ) : ClapTrap( name )
 	return ;
 }
 
-ScavTrap::ScavTrap( ScavTrap const &src ) : ClapTrap(src)
+ScavTrap::ScavTrap( ScavTrap const &src ) : ClapTrap( src )
 {
 	std::cout << "ScavTrap " << this->_name << " copy constructor called" << std::endl;
 	return ;
