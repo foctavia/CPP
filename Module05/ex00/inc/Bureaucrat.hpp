@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:50:10 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/12 02:37:03 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/15 19:05:18 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,6 @@ class Bureaucrat
 		};
 };
 
-std::ostream	&operator<<( std::ostream &obj, Bureaucrat const &insert );
+std::ostream	&operator<<( std::ostream &obj, Bureaucrat *insert );
 
 #endif

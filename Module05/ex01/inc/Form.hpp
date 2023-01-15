@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 23:46:13 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/12 02:36:52 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/15 19:08:31 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ class Form
 		Form				&operator=( Form const &rhs );
 		
 		const std::string	getName( void ) const;
-		unsigned int	getGradeToSign( void ) const;
-		unsigned int	getGradeToExecute( void ) const;
+		unsigned int		getGradeToSign( void ) const;
+		unsigned int		getGradeToExecute( void ) const;
 		bool				getSigned( void ) const;
 		
 		void				checkGrade( const unsigned int grade );
@@ -57,6 +57,6 @@ class Form
 		};	
 };
 
-std::ostream	&operator<<( std::ostream &obj, Form const &insert );
+std::ostream	&operator<<( std::ostream &obj, Form *insert );
 
 #endif

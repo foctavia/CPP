@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:50:05 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/12 02:54:34 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/15 19:12:01 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	secondTest( void )
 	Form		*form2 = new Form();
 	
 	std::cout << std::endl
-		<< "***Testing***"<< std::endl << std::endl;	
+		<< "***Testing***"<< std::endl << std::endl;
 	try
 	{
 		form1->beSigned(*beur2);

@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:50:01 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/12 02:49:15 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/15 19:12:21 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,8 +122,8 @@ const char	*Bureaucrat::GradeTooHighException::what( void ) const throw()
 	return ("Grade too high");
 }
 
-std::ostream	&operator<<( std::ostream &obj, Bureaucrat const &insert )
+std::ostream	&operator<<( std::ostream &obj, Bureaucrat *insert )
 {
-	obj << insert.getName() << ", bureaucrat grade " << insert.getGrade() << std::endl;
+	obj << insert->getName() << ", bureaucrat grade " << insert->getGrade() << std::endl;
 	return (obj);
 }

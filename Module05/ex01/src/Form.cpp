@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 00:06:25 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/12 02:50:21 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/15 19:08:59 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,13 +123,13 @@ const char	*Form::GradeTooHighException::what( void ) const throw()
 	return ("Grade too high");
 }
 
-std::ostream	&operator<<( std::ostream &obj, Form const &insert )
+std::ostream	&operator<<( std::ostream &obj, Form *insert )
 {
-	obj << "Form " << insert.getName() << std::endl
-		<< "Grade to be signed : " << insert.getGradeToSign() << std::endl
-		<< "Grade to be executed : " << insert.getGradeToSign() << std::endl
+	obj << "Form " << insert->getName() << std::endl
+		<< "Grade to be signed : " << insert->getGradeToSign() << std::endl
+		<< "Grade to be executed : " << insert->getGradeToSign() << std::endl
 		<< "Status : ";
-	if (insert.getSigned())
+	if (insert->getSigned())
 		obj << "Signed" << std::endl;
 	else
 		obj << "Not signed" << std::endl;
