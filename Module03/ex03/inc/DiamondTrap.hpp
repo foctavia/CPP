@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 11:30:47 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/13 14:48:13 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/15 18:18:49 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ class DiamondTrap : public ScavTrap, public FragTrap
 		virtual ~DiamondTrap( void );
 
 		DiamondTrap	&operator=( DiamondTrap const &rhs );
+
+		std::string	getName( void ) const;
 
 		void		attack( const std::string &target );
 		void		whoAmI( void );

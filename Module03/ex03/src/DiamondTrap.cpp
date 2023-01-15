@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 11:30:53 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/09 12:40:43 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/15 18:19:37 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,11 @@ DiamondTrap	&DiamondTrap::operator=( DiamondTrap const &rhs )
 	this->ClapTrap::_name = rhs._name + "_clap_name";
 	std::cout << "DiamondTrap " << this->_name << " assignment operator called" << std::endl;
 	return (*this);
+}
+
+std::string	DiamondTrap::getName( void ) const
+{
+	return (this->_name);
 }
 
 void	DiamondTrap::attack( const std::string &target )
