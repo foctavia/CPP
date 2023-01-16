@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 13:59:56 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/17 15:27:46 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/18 10:03:55 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 Intern::Intern( void )
 {
-	std::cout << "Intern constructor called" << std::endl;
+	std::cout << "Intern default constructor called" << std::endl;
 	return ;
 }
 
 Intern::Intern( Intern const &src )
 {
-	*this = src;
 	std::cout << "Intern copy constructor called" << std::endl;
+	*this = src;
 	return ;
 }
 
@@ -67,7 +67,8 @@ AForm	*Intern::makeForm( const std::string name, const std::string target )
 		}
 	}
 	
-	std::cerr << RED("ERROR : Intern can not create ") << name << RED(" form") << std::endl
-		<< "Intern can only create form for " << GREEN("Shrubbery Creation / Robotomy Request / Presidential Pardon") << std::endl;
+	std::cerr << RED("ERROR : Form Creation for ") << name << RED(" has failed") << std::endl
+		<< "Intern can only create form for " 
+		<< GREEN("Shrubbery Creation / Robotomy Request / Presidential Pardon") << std::endl;
 	return (NULL);
 }
