@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 17:36:43 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/17 13:50:51 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/18 09:55:42 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 # include "AForm.hpp"
 
 class Bureaucrat;
-
-class AForm;
 
 class ShrubberyCreationForm : public AForm
 {
