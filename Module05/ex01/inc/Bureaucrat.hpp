@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:50:10 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/15 19:12:06 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/16 16:23:24 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@
 # include <string>
 # include <stdexcept>
 # include "Form.hpp"
+
+# define RED(s) "\033[1;31m" s "\033[m"
+# define GREEN(s) "\033[1;32m" s "\033[m"
+# define YELLOW(s) "\033[1;33m" s "\033[m"
+# define BLUE(s) "\033[1;34m" s "\033[m"
 
 class Form;
 

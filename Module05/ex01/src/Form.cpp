@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 00:06:25 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/15 19:08:59 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/16 16:32:05 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,12 +102,12 @@ void	Form::checkGrade( const unsigned int grade )
 void	Form::beSigned( Bureaucrat &b )
 {
 	if (this->_signed == true)
-		std::cerr << b.getName() << " couldn't sign form " << this->_name
-			<< " because it is already signed" << std::endl;
+		std::cerr << b.getName() << RED(" couldn't sign form ") << this->_name
+			<< " because " << RED("it is already signed") << std::endl;
 	else if (b.getGrade() <= this->getGradeToSign())
 	{
 		this->_signed = true;
-		std::cout << b.getName() << " signed form " << this->_name << std::endl;
+		std::cout << b.getName() << GREEN(" signed form ") << this->_name << std::endl;
 	}
 	else
 		throw Form::GradeTooLowException();
@@ -115,12 +115,12 @@ void	Form::beSigned( Bureaucrat &b )
 
 const char	*Form::GradeTooLowException::what( void ) const throw()
 {
-	return ("Grade too low");
+	return (RED("Grade too low"));
 }
 
 const char	*Form::GradeTooHighException::what( void ) const throw()
 {
-	return ("Grade too high");
+	return (RED("Grade too high"));
 }
 
 std::ostream	&operator<<( std::ostream &obj, Form *insert )
@@ -130,9 +130,9 @@ std::ostream	&operator<<( std::ostream &obj, Form *insert )
 		<< "Grade to be executed : " << insert->getGradeToSign() << std::endl
 		<< "Status : ";
 	if (insert->getSigned())
-		obj << "Signed" << std::endl;
+		obj << GREEN("Signed") << std::endl;
 	else
-		obj << "Not signed" << std::endl;
+		obj << RED("Not signed") << std::endl;
 		
 	return (obj);
 }

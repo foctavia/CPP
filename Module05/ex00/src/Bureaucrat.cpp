@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:50:01 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/15 19:06:10 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/16 16:22:00 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,12 +101,12 @@ void	Bureaucrat::decrementGrade( void )
 
 const char	*Bureaucrat::GradeTooLowException::what( void ) const throw()
 {
-	return ("Grade too low");
+	return (RED("Grade too low"));
 }
 
 const char	*Bureaucrat::GradeTooHighException::what( void ) const throw()
 {
-	return ("Grade too high");
+	return (RED("Grade too high"));
 }
 
 std::ostream	&operator<<( std::ostream &obj, Bureaucrat *insert )

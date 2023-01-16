@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:50:01 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/15 19:12:21 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/16 16:31:09 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,19 +107,19 @@ void	Bureaucrat::signForm( Form &f )
 	}
 	catch (std::exception &e)
 	{
-		std::cerr << this->_name << " couldn't sign form " << f.getName()
+		std::cerr << this->_name << RED(" couldn't sign form ") << f.getName()
 			<< " because " << e.what() << std::endl;
 	}
 }
 
 const char	*Bureaucrat::GradeTooLowException::what( void ) const throw()
 {
-	return ("Grade too low");
+	return (RED("Grade too low"));
 }
 
 const char	*Bureaucrat::GradeTooHighException::what( void ) const throw()
 {
-	return ("Grade too high");
+	return (RED("Grade too high"));
 }
 
 std::ostream	&operator<<( std::ostream &obj, Bureaucrat *insert )
