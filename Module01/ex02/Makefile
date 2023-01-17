@@ -6,7 +6,7 @@
 #    By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/04 20:54:54 by foctavia          #+#    #+#              #
-#    Updated: 2023/01/05 17:51:15 by foctavia         ###   ########.fr        #
+#    Updated: 2023/01/17 16:32:47 by foctavia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ CXX			= c++
 CXXFLAGS	= -std=c++98 -Wall -Wextra -Werror
 
 SRC			= main.cpp
+
 OBJ			= $(SRC:%.cpp=%.o)
 
 # Rules
