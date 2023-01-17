@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:53:41 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/11 01:43:53 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/17 10:40:34 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 class MateriaSource : public IMateriaSource
 {
 	private:
-		AMateria	*_materias[4];
+		AMateria	*_materias[2];
+		
 	public:
 		MateriaSource( void );
 		MateriaSource( MateriaSource const &src );

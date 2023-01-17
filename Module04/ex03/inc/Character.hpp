@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:53:30 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/11 02:04:09 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/17 10:55:31 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ class Character : public ICharacter
 	private:
 		std::string	_name;
 		AMateria	*_inventory[4];
+		AMateria	*_floor[10];
 		int			_slot;
+		int			_floorIdx;
 	
 	public:
 		Character( void );

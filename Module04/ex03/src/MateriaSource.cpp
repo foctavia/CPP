@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:54:03 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/11 01:46:07 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/17 10:40:56 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 MateriaSource::MateriaSource( void )
 {
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 2; i++)
 		this->_materias[i] = NULL;
 	return ;
 }
@@ -27,6 +27,11 @@ MateriaSource::MateriaSource( MateriaSource const &src )
 
 MateriaSource::~MateriaSource( void )
 {
+	for(int i = 0; i < 2; i++)
+	{
+		if (this->_materias[i])
+			delete this->_materias[i];
+	}
 	return ;
 }
 
@@ -34,7 +39,7 @@ MateriaSource	&MateriaSource::operator=( MateriaSource const &rhs )
 {
 	if (this == &rhs)
 	{
-		for(int i = 0; i < 4; i++)
+		for(int i = 0; i < 2; i++)
 			this->_materias[i] = rhs._materias[i];
 	}
 	return (*this);
@@ -45,7 +50,7 @@ void 		MateriaSource::learnMateria( AMateria* m)
 	int	i = 0;
 	while (this->_materias[i])
 		i++;
-	if (i >= 4)
+	if (i >= 2)
 	{
 		std::cout << "Reached maximum capacity of 4 materia per materiaSource" << std::endl;
 		return ;
