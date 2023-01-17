@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 16:33:01 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/13 19:10:23 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/17 10:05:18 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,15 +143,23 @@ void	secondTest( void )
 		delete dogs[i];
 		std::cout << std::endl;
 	}
+}
 
-	// std::cout << std::endl << std::endl;
-
-	// Dog basic;
-	// std::cout << std::endl;
-	// {
-	// 	Dog tmp = basic;
-	// }
-	// std::cout << std::endl;
+void	thirdTest( void )
+{
+	std::cout << "*******************CONSTRUCTOR********************"
+		<< std::endl << std::endl;
+	
+	Dog	basic;
+	std::cout << std::endl;
+	{
+		Dog tmp = basic;
+	}
+	std::cout << std::endl;
+	
+	std::cout << std::endl
+		<< "********************DESTRUCTOR********************"
+		<< std::endl << std::endl;
 }
 
 int main()
@@ -159,5 +167,8 @@ int main()
 	firstTest();
 	std::cout << std::endl;
 	secondTest();
+	std::cout << std::endl;
+	thirdTest();
+
 	return 0;
 }
