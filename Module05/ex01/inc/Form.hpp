@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 23:46:13 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/15 19:08:31 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/17 17:36:27 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,13 @@ class Form
 		{
 			public:
 				virtual const char	*what( void ) const throw();
-		};	
+		};
+		
+		class FormIsSignedException : public std::exception
+		{
+			public:
+				virtual const char	*what( void ) const throw();
+		};
 };
 
 std::ostream	&operator<<( std::ostream &obj, Form *insert );

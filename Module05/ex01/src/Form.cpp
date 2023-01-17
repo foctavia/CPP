@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 00:06:25 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/16 16:32:05 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/17 17:38:28 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,15 +102,14 @@ void	Form::checkGrade( const unsigned int grade )
 void	Form::beSigned( Bureaucrat &b )
 {
 	if (this->_signed == true)
-		std::cerr << b.getName() << RED(" couldn't sign form ") << this->_name
-			<< " because " << RED("it is already signed") << std::endl;
-	else if (b.getGrade() <= this->getGradeToSign())
+		throw Form::FormIsSignedException();
+	else if (b.getGrade() > this->getGradeToSign())
+		throw Form::GradeTooLowException();
+	else
 	{
 		this->_signed = true;
 		std::cout << b.getName() << GREEN(" signed form ") << this->_name << std::endl;
 	}
-	else
-		throw Form::GradeTooLowException();
 }
 
 const char	*Form::GradeTooLowException::what( void ) const throw()
@@ -121,6 +120,11 @@ const char	*Form::GradeTooLowException::what( void ) const throw()
 const char	*Form::GradeTooHighException::what( void ) const throw()
 {
 	return (RED("Grade too high"));
+}
+
+const char	*Form::FormIsSignedException::what( void ) const throw()
+{
+	return (RED("Form is already signed"));
 }
 
 std::ostream	&operator<<( std::ostream &obj, Form *insert )
