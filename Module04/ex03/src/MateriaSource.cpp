@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 21:54:03 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/17 10:40:56 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/17 14:54:45 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void 		MateriaSource::learnMateria( AMateria* m)
 		i++;
 	if (i >= 2)
 	{
-		std::cout << "Reached maximum capacity of 4 materia per materiaSource" << std::endl;
+		std::cout << "Reached maximum capacity of 2 materia per materiaSource" << std::endl;
 		return ;
 	}
 	this->_materias[i] = m;
