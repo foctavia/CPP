@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:50:01 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/16 16:31:09 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/17 13:46:51 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,16 +66,6 @@ Bureaucrat	&Bureaucrat::operator=( Bureaucrat const &rhs )
 	return (*this);
 }
 
-const std::string	Bureaucrat::getName( void ) const
-{
-	return (this->_name);
-}
-
-unsigned int	Bureaucrat::getGrade( void ) const
-{
-	return (this->_grade);
-}
-
 void	Bureaucrat::setGrade( unsigned int grade )
 {
 	if (grade < 1)
@@ -84,6 +74,16 @@ void	Bureaucrat::setGrade( unsigned int grade )
 		throw Bureaucrat::GradeTooLowException();
 	else
 		this->_grade = grade;
+}
+
+const std::string	Bureaucrat::getName( void ) const
+{
+	return (this->_name);
+}
+
+unsigned int	Bureaucrat::getGrade( void ) const
+{
+	return (this->_grade);
 }
 
 void	Bureaucrat::incrementGrade( void )

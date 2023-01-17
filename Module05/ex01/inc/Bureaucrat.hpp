@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:50:10 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/16 16:23:24 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/17 13:46:27 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ class Bureaucrat
 		const std::string	_name;
 		unsigned int		_grade;
 	
+		void				setGrade( unsigned int grade );
+		
 	public:
 		Bureaucrat( void );
 		Bureaucrat( const std::string name );
@@ -44,7 +46,6 @@ class Bureaucrat
 
 		const std::string	getName( void ) const;
 		unsigned int		getGrade( void ) const;
-		void				setGrade( unsigned int grade );
 		
 		void				incrementGrade( void );
 		void				decrementGrade( void );

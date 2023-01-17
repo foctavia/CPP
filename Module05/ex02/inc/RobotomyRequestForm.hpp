@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 17:37:08 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/16 10:23:51 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/17 13:50:44 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@ class RobotomyRequestForm : public AForm
 	private:
 		const std::string	_target;
 		
-	public:
 		RobotomyRequestForm( void );
+		
+	public:
 		RobotomyRequestForm( std::string target );
 		RobotomyRequestForm( RobotomyRequestForm const &src );
 

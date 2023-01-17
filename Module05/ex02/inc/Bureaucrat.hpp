@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:50:10 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/16 16:55:14 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/17 13:54:59 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 # include <string>
 # include <fstream>
 # include <stdexcept>
+# include <cerrno>
+# include <cstring>
+# include <cstdlib>
 # include "AForm.hpp"
 
 # define RED(s) "\033[1;31m" s "\033[m"
@@ -24,7 +27,6 @@
 # define YELLOW(s) "\033[1;33m" s "\033[m"
 # define BLUE(s) "\033[1;34m" s "\033[m"
 # define PURPLE(s) "\033[1;35m" s "\033[m"
-
 
 class AForm;
 
@@ -34,6 +36,8 @@ class Bureaucrat
 		const std::string	_name;
 		unsigned int		_grade;
 	
+		void				setGrade( unsigned int grade );
+		
 	public:
 		Bureaucrat( void );
 		Bureaucrat( const std::string name );
@@ -47,7 +51,6 @@ class Bureaucrat
 
 		const std::string	getName( void ) const;
 		unsigned int		getGrade( void ) const;
-		void				setGrade( unsigned int grade );
 		
 		void				incrementGrade( void );
 		void				decrementGrade( void );

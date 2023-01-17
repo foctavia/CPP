@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 17:36:43 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/16 16:34:25 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/17 13:50:51 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ class ShrubberyCreationForm : public AForm
 	private:
 		const std::string	_target;
 	
-	public:
 		ShrubberyCreationForm( void );
+		
+	public:
 		ShrubberyCreationForm( std::string target );
 		ShrubberyCreationForm( ShrubberyCreationForm const &src );
 

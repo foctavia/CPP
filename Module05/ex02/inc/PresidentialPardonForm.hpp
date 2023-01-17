@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 17:37:12 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/16 10:23:43 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/17 13:50:37 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@ class PresidentialPardonForm : public AForm
 	private:
 		const std::string	_target;
 		
-	public:
 		PresidentialPardonForm( void );
+		
+	public:
 		PresidentialPardonForm( std::string target );
 		PresidentialPardonForm( PresidentialPardonForm const &src );
 
