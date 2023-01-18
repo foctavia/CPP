@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 13:59:56 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/18 10:03:55 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/18 10:08:33 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static AForm	*makePresidentialPardon( const std::string target )
 
 AForm	*Intern::makeForm( const std::string name, const std::string target )
 {
-	AForm		*((*forms_func[3])( const std::string target )) = { &makeShrubberyCreation, &makeRobotomyRequest, &makePresidentialPardon };
+	AForm		*(*forms_func[3])( const std::string target ) = { &makeShrubberyCreation, &makeRobotomyRequest, &makePresidentialPardon };
 	std::string	forms[3] = { "Shrubbery Creation", "Robotomy Request", "Presidential Pardon"};
 
 	for (int i = 0; i < 3; i++)
@@ -63,7 +63,7 @@ AForm	*Intern::makeForm( const std::string name, const std::string target )
 		if (forms[i] == name)
 		{
 			std::cout << "Intern " << GREEN("creates ") << name << " form" << std::endl;
-			return ((*forms_func[i])(target));
+			return (forms_func[i](target));
 		}
 	}
 	
