@@ -6,7 +6,7 @@
 #    By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/17 16:33:41 by foctavia          #+#    #+#              #
-#    Updated: 2023/01/17 16:34:19 by foctavia         ###   ########.fr        #
+#    Updated: 2023/01/18 10:22:30 by foctavia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,24 +18,31 @@ RESET		= "\033[m"
 NAME		= convert
 
 CXX			= c++
-CXXFLAGS	= -std=c++98 -Wall -Wextra -Werror
+CXXFLAGS	= -std=c++98 -Wall -Wextra -Werror -g
 
-SRC			= main.cpp
+INCDIR		= inc/
+SRCDIR		= src/
+OBJDIR		= obj/
 
-OBJ			= $(SRC:%.cpp=%.o)
+SRC			= main.cpp \
+				Convert.cpp
+				
+OBJ			= $(addprefix ${OBJDIR}, ${SRC:%.cpp=%.o})
+INC			= -I./$(INCDIR)
 
 # Rules
 all			: $(NAME)
 
-%.o			: %.cpp
-			$(CXX) $(CXXFLAGS) -c $< -o $@
+$(OBJDIR)%.o: $(SRCDIR)%.cpp
+			@mkdir -p ${@D}
+			$(CXX) $(CXXFLAGS) $(INC) -c $< -o $@
 
 $(NAME)		: $(OBJ)
-			$(CXX) $(CXXFLAGS) $(OBJ) -o $@
+			$(CXX) $(CXXFLAGS) $(INC) $(OBJ) -o $@
 			@echo "Compiling convert"$(GREEN)"\tOK"$(RESET)
 
 clean		:
-			rm -f $(OBJ)
+			rm -rf $(OBJDIR)
 
 fclean		: clean
 			rm -f $(NAME)
