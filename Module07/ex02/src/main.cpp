@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 16:38:35 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/19 23:00:24 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/20 13:55:27 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,22 @@ void	emptyTest( void )
 
 	Array<int>	empty;
 
-	srand((unsigned) time(NULL));
-	for (unsigned int i = 0; i < empty.size(); i++)
+	if (empty.getArray())
 	{
-		empty[i] = rand();
-		std::cout << "empty[" << i << "] is not empty" << std::endl; 
+		srand((unsigned) time(NULL));
+
+		for (unsigned int i = 0; i < empty.size(); i++)
+		{
+			empty[i] = rand();
+			std::cout << "empty[" << i << "] is not empty" << std::endl; 
+		}
+
+		std::cout << GREEN("RESULT : if the section up above is empty then "
+			<< "it means default constructor with size 0 create an empty array") << std::endl << std::endl;
 	}
-	
-	std::cout << GREEN("RESULT : Default constructor with size 0 create an empty array") << std::endl << std::endl;
+	else
+		std::cerr << RED("RESULT : Default constructor did not creates an empty array but a null array")
+			<< std::endl << std::endl;
 }
 
 void	mirrorTest( void )
@@ -195,3 +203,60 @@ int	main( void )
 
 	return (0);
 }
+
+/*
+This is main provided by the subject
+
+#include <iostream>
+#include <Array.hpp>
+
+#define MAX_VAL 750
+int main(int, char**)
+{
+    Array<int> numbers(MAX_VAL);
+    int* mirror = new int[MAX_VAL];
+    srand(time(NULL));
+    for (int i = 0; i < MAX_VAL; i++)
+    {
+        const int value = rand();
+        numbers[i] = value;
+        mirror[i] = value;
+    }
+    //SCOPE
+    {
+        Array<int> tmp = numbers;
+        Array<int> test(tmp);
+    }
+
+    for (int i = 0; i < MAX_VAL; i++)
+    {
+        if (mirror[i] != numbers[i])
+        {
+            std::cerr << "didn't save the same value!!" << std::endl;
+            return 1;
+        }
+    }
+    try
+    {
+        numbers[-2] = 0;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    try
+    {
+        numbers[MAX_VAL] = 0;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+
+    for (int i = 0; i < MAX_VAL; i++)
+    {
+        numbers[i] = rand();
+    }
+    delete [] mirror;//
+    return 0;
+} */

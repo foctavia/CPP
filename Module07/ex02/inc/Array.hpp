@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 16:38:44 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/19 23:03:37 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/20 12:08:16 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,9 @@ class Array
 			return ;
 		}
 		
-		Array( Array const &src )
+		Array( Array const &src ) 
 		{
+			this->_array = NULL;
 			*this = src;
 			return ;
 		}
@@ -56,8 +57,8 @@ class Array
 		{
 			if (this != &rhs)
 			{
-			// 	if (this->_array)
-			// 		delete [] this->_array;
+				if (this->_array != NULL)
+					delete [] this->_array;
 				this->_size = rhs.size();
 				this->_array = new T[this->_size];
 				for (unsigned int i = 0; i < this->_size; i++)
@@ -74,6 +75,11 @@ class Array
 				throw Array<T>::OutOfBondsException();
 			}
 			return (this->_array[i]);
+		}
+
+		T	*getArray( void ) const
+		{
+			return (this->_array);
 		}
 
 		unsigned int	size( void ) const
