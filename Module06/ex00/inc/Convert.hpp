@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 10:22:51 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/19 10:51:48 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/20 10:14:13 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include <limits>
 # include <climits>
 # include <cstdlib>
 # include <cstring>
