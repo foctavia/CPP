@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:23:29 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/19 15:23:57 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/20 10:23:41 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@ void	identify( Base *p )
 {
 	std::cout << "Type from pointer\t: ";
 	
-	if (dynamic_cast<A *>(p))
+	if (dynamic_cast<A *>(p) != NULL)
 		std::cout << "A" << std::endl;
-	else if (dynamic_cast<B *>(p))
+	else if (dynamic_cast<B *>(p) != NULL)
 		std::cout << "B" << std::endl;
-	else if (dynamic_cast<C *>(p))
+	else if (dynamic_cast<C *>(p) != NULL)
 		std::cout << "C" << std::endl;
 	else
 		std::cout << "unknown" << std::endl;
@@ -82,7 +82,7 @@ void	identify( Base &p )
 			std::cout << types[i] << std::endl;
 			break ;
 		}
-		catch (const std::bad_cast &bc)
+		catch (const std::exception &e)
 		{
 			i++;
 		}
