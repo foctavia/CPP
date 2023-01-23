@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 22:07:10 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/23 02:23:30 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/23 13:54:24 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,16 +81,16 @@ void	biggerTest( void )
 	std::cout << BLUE("***Bigger Test***") << std::endl << std::endl;
 	
 	Span				sp = Span(10);
-	std::vector<int>	insert(10);
+	std::vector<int>	add(10);
 	
 	std::srand((unsigned)time(NULL));
-	std::generate(insert.begin(), insert.end(), generator);
+	std::generate(add.begin(), add.end(), generator);
 
 	try
 	{
 		std::cout << "Adding vector of 10 numbers to sp ..." << std::endl << std::endl;
-		sp.addNumber(insert.begin(), insert.end());
-		sp.addNumber(insert.begin(), insert.end());	
+		sp.addNumber(add.begin(), add.end());
+		sp.addNumber(add.begin(), add.end());	
 	}
 	catch (const std::exception &e)
 	{
@@ -124,15 +124,15 @@ void	biggestTest( void )
 	std::cout << BLUE("***Biggest Test***") << std::endl << std::endl;
 	
 	Span				sp = Span(15000);
-	std::vector<int>	insert(15000);
+	std::vector<int>	add(15000);
 	
 	std::srand((unsigned)time(NULL));
-	std::generate(insert.begin(), insert.end(), big_generator);
+	std::generate(add.begin(), add.end(), big_generator);
 
 	try
 	{
 		std::cout << "Adding vector of 15000 numbers to sp ..." << std::endl << std::endl;
-		sp.addNumber(insert.begin(), insert.end());
+		sp.addNumber(add.begin(), add.end());
 	}
 	catch (const std::exception &e)
 	{

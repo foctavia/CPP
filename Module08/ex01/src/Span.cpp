@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 23:06:58 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/23 01:33:29 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/23 13:51:10 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,8 @@ void	Span::addNumber( int nb )
 
 void	Span::addNumber( std::vector<int>::const_iterator first, std::vector<int>::const_iterator last )
 {
-	unsigned int						dist = std::distance(first, last);
-	std::vector<int>::const_iterator	post = this->_vct.end() - 1;
+	unsigned int				dist = std::distance(first, last);
+	std::vector<int>::iterator	post = this->_vct.begin();
 	
 	if (this->_vct.size() + dist > this->_max)
 		throw Span::reachedMaxCapacityException();
