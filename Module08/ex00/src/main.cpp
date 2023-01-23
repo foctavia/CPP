@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 22:07:10 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/22 22:59:08 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/23 01:19:40 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	listTest( void )
 	lst.push_back(17);
 	lst.push_back(20);
 
-	std::cout << BLUE("***LIST TESTER***") << std::endl << std::endl
+	std::cout << BLUE("***List Tester***") << std::endl << std::endl
 		<< "The list contains of numbers :" << std::endl;
 
 	for_each(lst.begin(), lst.end(), displayInt);
@@ -69,7 +69,7 @@ void	vectorTest( void )
 	vct.push_back(17);
 	vct.push_back(20);
 
-	std::cout << BLUE("***VECTOR TESTER***") << std::endl << std::endl
+	std::cout << BLUE("***Vector Tester***") << std::endl << std::endl
 		<< "The vector contains of numbers :" << std::endl;
 
 	for_each(vct.begin(), vct.end(), displayInt);
