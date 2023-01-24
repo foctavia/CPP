@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 00:06:25 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/16 17:11:01 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/24 11:56:26 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,15 +102,14 @@ void	AForm::checkGrade( const unsigned int grade )
 void	AForm::beSigned( Bureaucrat &b )
 {
 	if (this->_signed == true)
-		std::cerr << b.getName() << RED(" couldn't sign form ") << this->_name
-			<< " because " << RED("it is already signed") << std::endl;
-	else if (b.getGrade() <= this->getGradeToSign())
+		throw AForm::FormIsSignedException();
+	else if (b.getGrade() > this->getGradeToSign())
+		throw AForm::GradeTooLowException();
+	else
 	{
 		this->_signed = true;
 		std::cout << b.getName() << GREEN(" signed form ") << this->_name << std::endl;
 	}
-	else
-		throw AForm::GradeTooLowException();
 }
 
 void	AForm::execute( Bureaucrat const &executor ) const
@@ -129,6 +128,11 @@ const char	*AForm::GradeTooLowException::what( void ) const throw()
 const char	*AForm::GradeTooHighException::what( void ) const throw()
 {
 	return (RED("Grade too high"));
+}
+
+const char	*AForm::FormIsSignedException::what( void ) const throw()
+{
+	return (RED("Form is already signed"));
 }
 
 const char	*AForm::FormNotSignedException::what( void ) const throw()

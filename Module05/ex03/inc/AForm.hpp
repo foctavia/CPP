@@ -6,7 +6,7 @@
 /*   By: foctavia <foctavia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 23:46:13 by foctavia          #+#    #+#             */
-/*   Updated: 2023/01/16 17:02:13 by foctavia         ###   ########.fr       */
+/*   Updated: 2023/01/24 11:55:49 by foctavia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,12 @@ class AForm
 		};
 		
 		class GradeTooHighException : public AFormException
+		{
+			public:
+				virtual const char	*what( void ) const throw();
+		};
+
+		class FormIsSignedException : public AFormException
 		{
 			public:
 				virtual const char	*what( void ) const throw();
